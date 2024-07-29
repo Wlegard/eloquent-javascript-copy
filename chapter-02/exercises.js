@@ -26,13 +26,15 @@ LOGS =>
 
 */
 
-function triangles(size) {
-  var level = []
-  //create a for loop
-  for(var i = 1; i <= size; i++){
-     var line = '#'.repeat(i)
-     level.push(line)
-    return level;
+function triangles(number) {
+//create for loop to loop over the number
+  for (var i = 1; i <= number; i++) {
+    var level = ''; // initialize an empty string for each level
+    //create a for loop to access the '#'
+    for (var j = 1; j <= i; j++) {
+      level += '#'; // add a '#' for each column in the current row
+    }
+    console.log(level); // print level to the console
   }
 }
 
@@ -56,13 +58,21 @@ on the number:
 function fizzBuzz(start, end) {
   // create for loop 
   for(var i = start; i <= end; i++){
+    //  if the number is divisible by both 3 & 5
     if (i %  3 ===0 && i % 5 === 0){
+      //log "fizzbuzz"
 console.log("fizzbuzz")
+  //if the number is divisible by 3,
     }else if(i % 3 === 0){
+      //log "fizz"
       console.log("fizz");
+      //if the number is divisible by 5
     }else if(i % 5 === 0){
+      //log "buzz"
       console.log("buzz");
+      //if the number is not divisible by 3 or 5
     }else{
+      //log the number
       console.log(i);
     }
 
@@ -100,10 +110,25 @@ LOGS =>
 */
 
 function drawChessboard(x) {
-
+  // initialize variable with empty array literal
+  var chess = [];
+//create for loop for each row index
+    for (var i = 0; i < x; i++) {
+      // initialize a variable with empty string for each row
+        var row = '';
+        //create for loop for second for loop for column
+        for (var j = 0; j < x; j++) {
+          //if i plus j  sum is equal the add a space, if not add '#'
+            row += (i + j) % 2 === 0 ? ' ' : '#' ;
+        }
+        //push row string into chess array
+        chess += row + '\n';
+        
+    }
+// return chess array joined with a line break
+    console.log(chess);
 
 }
-
 ////////////////////////////////////////////////////////////////////////////////
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
