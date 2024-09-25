@@ -25,9 +25,13 @@ LOGS =>
 #####
 
 */
-
-function triangles() {
-  
+//function has one parameter
+function triangles(size) {
+  //create loop to iterate from 1 to size(number of rows)
+  for (var i = 1; i <= size; i++){
+    // log '#'(create string of '#') and the number of each character using .repeat method
+    console.log('#'.repeat(i));
+  }
 }
 
 
@@ -48,7 +52,27 @@ on the number:
 */
 
 function fizzBuzz(start, end) {
-  
+  // create for loop to iterate from start to end 
+  for( var i = start; i <= end; i++){
+    // if numbers are divisible by 3 & 5 
+    if (i % 3 === 0 && i % 5 === 0 ){
+      //lof 'fizzbuzz'
+      console.log('fizzbuzz');
+      // if numbers are divible by 5 only
+    } else if(i % 5 === 0){
+      // log 'buzz'
+      console.log('buzz');
+      //if numbers are divisible by 3 only
+    }else if( i % 3 === 0){
+      // log 'fizz
+      console.log('fizz');
+      // if numbers are not divisble by 3 or 5 
+    }else{
+      // log the number
+      console.log(i);
+    }
+
+  }
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -82,9 +106,29 @@ LOGS =>
 */
 
 function drawChessboard(x) {
-
-
+  // create varaible assigned to empty string
+  var chessboard = ''
+  // create for loop to iterate through row
+  for (var i = 0; i < x; i++){
+    //create for loop to iterate over each column
+    for (var j = 0; j < x; j++) {
+      // i + j are even 
+    if ((i + j) % 2 === 0) {
+      //add space
+      chessboard += ' ';
+      // if odd
+  } else {
+    // add '#'
+      chessboard += '#';
+  }
+  }
+  //add linebreak character
+  chessboard += '\n'
 }
+//log chessboard
+console.log(chessboard);
+}
+
 
 ////////////////////////////////////////////////////////////////////////////////
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
