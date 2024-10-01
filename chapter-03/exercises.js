@@ -2,33 +2,95 @@
 // min /////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function min() {
-
+function min(x, y) {
+// if x is less than y
+    if(x < y){
+      //return y
+      return x
+      //if x is more than y
+  }else{
+    //return y
+      return y
+  }
 }
+  console.log(min(0, 10));
+  // → 0
+  console.log(min(0, -10));
+  // → -10
 
 ////////////////////////////////////////////////////////////////////////////////
 // isEven //////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function isEven() {
+function isEven(n) {
+  //if n is even
+    if(n === 0){
+      //return true
+      return true
+  }
+  // if n is odd
+    if(n === 1){
+      //return false
+      return false
+      }
+      // n is negative
+    if(n < 0){
+      //Convert negative to positive
+      return isEven(-n)
+      }
+      // calls itself - 2 for even
+    return isEven(n - 2)
+    }
+  console.log(isEven(50));
+  // → true
+  console.log(isEven(75));
+  // → false
+  console.log(isEven(-1));
+  // → ??
 
-}
 
 ////////////////////////////////////////////////////////////////////////////////
 // countChars //////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function countChars() {
+function countChars(string,char) {
+    // create variable count assign to 0
+  var count = 0;
+      //create for loop to loop through string
+  for (var i = 0; i < string.length; i++){
+          //if string at each index has char
+if(string[i] === char){
+  //add 1 to the count
+count++
+  }
+    }
+    //return count
+  return count
+  }
+  console.log(countChars("kakkerlak", "k"));
 
-}
 
 ////////////////////////////////////////////////////////////////////////////////
 // countBs /////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function countBs() {
+function countBs(string) {
+  // create variable count assign to 0
+    var count = 0;
+    //create for loop to loop through string
+    for (var i = 0; i < string.length; i++){
+      //if string at each index has letter "B"
+  if(string[i] === "B"){
+    // add 1 to the count
+  count++
+    }
+      }
+      //return count
+    return count
+    }
+  
+  console.log(countBs("BOB"));
 
-}
 
 ////////////////////////////////////////////////////////////////////////////////
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
